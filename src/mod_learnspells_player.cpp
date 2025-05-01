@@ -66,13 +66,16 @@ void LearnSpells::LearnClassSpells(Player* player)
         {
             if (spell[SPELL_REQUIRED_CLASS] == player->getClass())
             {
-                if (player->GetLevel() >= spell[SPELL_REQUIRED_LEVEL])
+                if (spell[SPELL_REQUIRED_TEAM] == -1 || spell[SPELL_REQUIRED_TEAM] == player->GetTeamId())
                 {
-                    if (spell[SPELL_REQUIRED_SPELL_ID] == -1 || player->HasSpell(spell[SPELL_REQUIRED_SPELL_ID]))
+                    if (player->GetLevel() >= spell[SPELL_REQUIRED_LEVEL])
                     {
-                        if (!player->HasSpell(spell[SPELL_ID]))
+                        if (spell[SPELL_REQUIRED_SPELL_ID] == -1 || player->HasSpell(spell[SPELL_REQUIRED_SPELL_ID]))
                         {
-                            player->learnSpell(spell[SPELL_ID]);
+                            if (!player->HasSpell(spell[SPELL_ID]))
+                            {
+                                player->learnSpell(spell[SPELL_ID]);
+                            }
                         }
                     }
                 }
