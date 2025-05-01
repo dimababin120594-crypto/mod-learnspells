@@ -1039,7 +1039,8 @@ std::vector<std::vector<int>> LearnSpells::GetSpells(int type)
             { 25574, -1, -1, 7, 69, 10601, 0 }, // Nature Resistance Totem (Rank 4)
             { 25590, -1, -1, 7, 69, 20777, 0 }, // Ancestral Spirit (Rank 6)
             { 33736, -1, -1, 7, 69, 24398, 0 }, // Water Shield (Rank 8)
-            { 2825, -1, -1, 7, 70, -1, 0 }, // Bloodlust
+            { 2825, 1, -1, 7, 70, -1, 0 }, // Bloodlust
+            { 32182, 0, -1, 7, 70, -1, 0 }, // Heroism
             { 25396, -1, -1, 7, 70, 25391, 0 }, // Healing Wave (Rank 12)
             { 25442, -1, -1, 7, 70, 25439, 0 }, // Chain Lightning (Rank 6)
             { 25457, -1, -1, 7, 70, 29228, 0 }, // Flame Shock (Rank 7)
